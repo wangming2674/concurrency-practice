@@ -12,7 +12,10 @@ public class RightWayStopThreadWithSleepEveryLoop {
     public static void main(String[] args) throws InterruptedException {
         Runnable runnable = () -> {
             int num = 0;
-            //循环内部抛出的InterruptException并没有被catch，所以能正常中断
+            /**
+             * 循环内部抛出的InterruptException并没有被catch，所以能正常中断。
+             * 总之，不要在循环内部try/catch 否则线程会无法正确的响应中断。
+             */
             try {
                 while (num <= 10000) {
                     if (num % 100 == 0) {
