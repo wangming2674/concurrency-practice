@@ -3,7 +3,7 @@ package threadcoreknowledge.stopthread;
 /**
  * @ClassName RightWayStopThreadInProd
  * @Description 最佳实践：catch了InterruptException之后的优先选择(在方法签名中抛出异常)
- * 理由: 如果这样做，那么在run()方法中就会强制try/catch
+ * 理由: 如果这样做，那么在run()方法中就会强制try/catch(传递中断)
  * @Author Evan Wang
  * @Version 1.0.0
  * @Date 2020/3/26 22:01
@@ -26,6 +26,7 @@ public class RightWayStopThreadInProd implements Runnable {
                 throwInMethod();
             } catch (InterruptedException e) {
                 //在这里try/catch，可以感知到中断，从而进行例如：保存日志，停止程序的操作。
+                //注意：这里只是收到了中断的信息，但是并没有真实的中断，还是需要自己做额外处理。
                 System.out.println("保存日志");
                 e.printStackTrace();
             }
