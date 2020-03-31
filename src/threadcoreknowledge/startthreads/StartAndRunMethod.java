@@ -1,4 +1,4 @@
-package threadcoreknowledge.startthread;
+package threadcoreknowledge.startthreads;
 
 /**
  * @ClassName StartAndRunMethod

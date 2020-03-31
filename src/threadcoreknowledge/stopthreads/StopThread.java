@@ -1,4 +1,4 @@
-package threadcoreknowledge.stopthread;
+package threadcoreknowledge.stopthreads;
 
 /**
  * @ClassName StopThread
