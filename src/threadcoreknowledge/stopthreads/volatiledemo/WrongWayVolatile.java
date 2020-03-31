@@ -2,7 +2,7 @@ package threadcoreknowledge.stopthreads.volatiledemo;
 
 /**
  * @ClassName WrongWayVolatile
- * @Description 描述：演示volatile的局限，part1看似可行
+ * @Description 演示volatile的局限，part1看似可行
  * volatile可以保证属性的可见性，可见性的简单理解：多个线程之间都可看到这个属性的值(JMM)
  * @Author Evan Wang
  * @Version 1.0.0
